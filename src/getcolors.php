@@ -13,7 +13,7 @@
  */
 class getcolors
 {
-
+    
     /**
      * get a hex color
      *
