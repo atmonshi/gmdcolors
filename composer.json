@@ -1,0 +1,24 @@
+{
+    "name": "wa7eedem/gmdcolors",
+    "description": "Google Material Design hex colors for php.",
+    "keywords": ["Google", "Material", "colors", "hex"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ashraf Monshi",
+            "email": "wh7r.com@gmail.com"
+        }
+    ],
+    "type": "project",
+    "require": {
+		"php": ">=5.4"
+    },
+	"require-dev": {
+		"phpunit/phpunit": "5.2.*"
+    },
+	"autoload": {
+        "psr-4": {
+            "wa7eedem\\gmdcolors\\": "src/"
+        }
+    }
+}
