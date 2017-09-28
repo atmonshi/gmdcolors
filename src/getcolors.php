@@ -71,7 +71,7 @@ class getcolors
                 }
             }
 
-            
+
             $return = $newReturn;
         }
 
