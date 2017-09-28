@@ -8,7 +8,7 @@
  *
  * to see all colors : https://material.google.com/style/color.html#color-color-palette .
  *
- * example : for more : http://evojira.uqu.edu.sa:8090/display/EVOWB/google+material+design+colors+Helper todo
+ *
  * @author atmonshi
  */
 class getcolors
@@ -24,11 +24,11 @@ class getcolors
      */
     public function hex($color, $accent = 500)
     {
-        $palette = $this->_palette($color);
+        $return = '#000';
+
+        $palette = $this->palette($color);
         if (isset($palette) && isset($palette[ $accent ])) {
             $return = $palette[ $accent ];
-        } else {
-            $return = '#000';
         }
 
         return $return;
@@ -44,7 +44,7 @@ class getcolors
      */
     public function rand($count)
     {
-        $palette = $this->_palette();
+        $palette = $this->palette();
         // Remove the Black and White , its ugly !!
         unset($palette['White']);
         unset($palette['Black']);
@@ -52,26 +52,26 @@ class getcolors
         // Clone the Colors array Keys
         $newGoogleMaterialColors = array_keys($palette);
 
+        // if more then one
+        $newReturn = [];
+        for ($i = 1; $i <= $count; $i++) {
+            // get a random Color
+            $newColor = array_rand($newGoogleMaterialColors, 1);
+            // send it to return
+            $newReturn[] = $palette[ $newGoogleMaterialColors[ $newColor ] ][300];
+            // then remove the picked Color from the Cloned array
+            unset($newGoogleMaterialColors[ $newColor ]);
+            // if the Colors about to be empty ... then repopulate it
+            if (count($newGoogleMaterialColors) < 2) {
+                $newGoogleMaterialColors = array_keys($palette);
+            }
+        }
+
+        $return = $newReturn;
         // if only One color
         if ($count == 1) {
             $newColor = array_rand($newGoogleMaterialColors, 1);
             $return   = $palette[ $newGoogleMaterialColors[ $newColor ] ][500];
-        } else {
-            $newReturn = [];
-            for ($i = 1; $i <= $count; $i++) {
-                // get a random Color
-                $newColor = array_rand($newGoogleMaterialColors, 1);
-                // send it to return
-                $newReturn[] = $palette[ $newGoogleMaterialColors[ $newColor ] ][300];
-                // then remove the picked Color from the Cloned array
-                unset($newGoogleMaterialColors[ $newColor ]);
-                // if the Colors about to be empty ... then repopulate it
-                if (count($newGoogleMaterialColors) < 2) {
-                    $newGoogleMaterialColors = array_keys($palette);
-                }
-            }
-            
-            $return = $newReturn;
         }
 
         return $return;
@@ -82,9 +82,9 @@ class getcolors
      * @param string $name the color name
      * @return array the color hex with it's accent
      */
-    private function _palette($name = null)
+    private function palette($name = null)
     {
-        $GoogleMaterialColors = [
+        $googleMaterialColors = [
             'Red'         => [
                 '50'   => '#FFEBEE',
                 '100'  => '#FFCDD2',
@@ -397,11 +397,11 @@ class getcolors
             ],
         ];
 
-        if (is_null($name)) {
-            return $GoogleMaterialColors;
-        } else {
-            return $GoogleMaterialColors[ $name ];
+        if (!is_null($name)) {
+            return $googleMaterialColors[ $name ];
         }
+
+        return $googleMaterialColors;
 
     }
 }
