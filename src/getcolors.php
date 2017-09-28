@@ -73,7 +73,6 @@ class getcolors
             $return = $newReturn;
         }
 
-        
         return $return;
     }
 
