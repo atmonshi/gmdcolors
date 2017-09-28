@@ -70,8 +70,7 @@ class getcolors
                     $newGoogleMaterialColors = array_keys($palette);
                 }
             }
-
-
+            
             $return = $newReturn;
         }
 
