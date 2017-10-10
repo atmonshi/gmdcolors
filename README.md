@@ -1,6 +1,10 @@
 # GMDColors
 [![Build Status](https://travis-ci.org/wa7eedem/GMDColors.svg?branch=master)](https://travis-ci.org/wa7eedem/GMDColors)
 [![Code Climate](https://codeclimate.com/github/wa7eedem/GMDColors/badges/gpa.svg)](https://codeclimate.com/github/wa7eedem/GMDColors)
+[![Latest Stable Version](https://poser.pugx.org/wa7eedem/gmdcolors/v/stable?format=flat)](https://packagist.org/packages/wa7eedem/gmdcolors)
+[![Total Downloads](https://poser.pugx.org/wa7eedem/gmdcolors/downloads?format=flat)](https://packagist.org/packages/wa7eedem/gmdcolors)
+[![License](https://poser.pugx.org/wa7eedem/gmdcolors/license?format=flat)](https://packagist.org/packages/wa7eedem/gmdcolors)
+
 
 #### get Google Material Design hex colors for php
 see the Color palette in [google material](https://material.io/guidelines/style/color.html#color-color-tool)
