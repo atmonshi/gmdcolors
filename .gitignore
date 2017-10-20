@@ -5,7 +5,6 @@ npm-debug.log
 # Laravel 4 specific
 bootstrap/compiled.php
 app/storage/
-
 # Laravel 5 & Lumen specific
 public/storage
 public/hot
@@ -20,4 +19,4 @@ Homestead.json
 .rocketeer/
 
 # phpstorm
-.idea/
+.idea
