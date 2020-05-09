@@ -16,7 +16,7 @@ class getcolorsTest extends PHPUnit_Framework_TestCase
      */
     public function testIsThereAnySyntaxError()
     {
-        $var = new wa7eedem\gmdcolors\getcolors;
+        $var = new atmonshi\gmdcolors\getcolors;
         $this->assertTrue(is_object($var));
         unset($var);
     }
@@ -26,7 +26,7 @@ class getcolorsTest extends PHPUnit_Framework_TestCase
      */
     public function testMethod1()
     {
-        $var = new wa7eedem\gmdcolors\getcolors;
+        $var = new atmonshi\gmdcolors\getcolors;
         $this->assertTrue($var->hex("Red", 50) == '#FFEBEE');
         unset($var);
     }
@@ -37,7 +37,7 @@ class getcolorsTest extends PHPUnit_Framework_TestCase
      */
     public function testTheRandomsCounts()
     {
-        $var = new wa7eedem\gmdcolors\getcolors;
+        $var = new atmonshi\gmdcolors\getcolors;
         $this->assertTrue(count($var->rand(15)) == 15);
         unset($var);
     }

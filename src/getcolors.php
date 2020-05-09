@@ -1,4 +1,6 @@
-<?php namespace wa7eedem\gmdcolors;
+<?php
+
+namespace atmonshi\gmdcolors;
 
 /**
  *  get hex colors for Google Material Design in php
